@@ -1,0 +1,21 @@
+body{
+    background-color: blue;
+
+}
+
+.introduction{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.finalPrice{
+    font-weight: bold;
+    font-size: 25px
+    color: black;
+}
+
+.productList{
+    background-color: grey;
+    opacity: 50%
+}

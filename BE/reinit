@@ -1,0 +1,15 @@
+#!/bin/bash
+echo Zaciatok reinit scriptu
+docker container ls -a
+echo pre potvrdenie manualne zadajte container pre potvrdenie:
+read Container
+docker stop $Container
+docker container rm $Container
+docker image rm springboot-mongodb:6.0
+echo image a container uspecne vymazane pull z gitu:
+git pull
+echo git pullnuty build programu:
+docker build -t springboot-mongodb:6.0 .
+echo build prebehol spustam na porte 8080:
+docker run -p 8080:8080 --name springboot-mongodb --link twmmongodb:mongo -d springboot-mongodb:6.0
+echo all proceses finished Backedn Functioning

@@ -1,0 +1,17 @@
+<!DOCTYPE  html>
+
+<html xmlns: xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+        <title>ThymeLeaf SpringBoot</title>
+        <link type="text/css" href="./thymeleafTemplate.css">
+    </head>
+    <body>
+        <p class="introduction" th:text = "'Hello, ' + ${name} + '!'"></p>
+        <h3>Here is list of what you bought:</h3>
+        <p class="productsList" th:each="${product} + ' - ' + ${productPrice}">
+        <p class="finalPrice" th:text="'Your final price came to: ' + ${finalPrice}"></p>
+        <h4>We are happy that you wanted to use our service!</h4>
+        <h4>Thank you for your purchase</h4>
+    </body>
+</html>

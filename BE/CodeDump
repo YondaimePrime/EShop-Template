@@ -1,0 +1,28 @@
+//        User user = purchase.getUser();
+//        List<Product> products = purchase.getProducts();
+//        ArrayList<String> finalProducts = new ArrayList<>();
+//        products.forEach(product -> {
+//            finalProducts.add(product.getName() + "\n");
+//            finalProducts.add((product.getPrice()) + "€\n");
+//        });
+//        senderService.sendSimpleEmail(user.getEmail(),
+//                "TWM Electronics receipt no.:" + purchase.getTime(),
+////                "Hi " + user.getUsername() +"." +
+////                        "\n" +
+////                        "\n" +
+////                        "Thank you for your purchase!" +
+////                        "\nHere is your purchase summary:" +
+////                        "\n"
+////                        + finalProducts
+////                        .toString()
+////                        .replace("[","")
+////                        .replace("]", "")
+////                        .replace(",","") +
+////                        "\n" +
+////                        "Total price: " + purchase.getFinalPrice()+ "€" +
+////                        "\nTime of purchase: " + purchase.getTime() + "" +
+////                        "\n We send your purchase to: " + user.getAddress() + ", in: " + user.getCity() + "." +
+////                        "\nTWM Electronics thank you for your purchase and hope that you will come again!"
+//
+//                //TODO Email/ThymeLeaf System
+//        );
