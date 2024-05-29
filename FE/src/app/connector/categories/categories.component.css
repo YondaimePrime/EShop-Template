@@ -1,0 +1,30 @@
+i{
+  float: right;
+}
+
+.categories{
+  padding: 0 20px;
+}
+
+.category{
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+  border-bottom: #EEEEEE solid 1px;
+}
+
+.box{
+  font-size: 1.1rem;
+  background-color: var(--supper);
+  height:100%
+}
+
+.psucat, .cpucat, .motcat, .disccat{
+  cursor: pointer;
+  display: none;
+}
+
+.visible{
+  display: block;
+  padding: 0 20px;
+}

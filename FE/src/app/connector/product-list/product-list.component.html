@@ -1,0 +1,5 @@
+<div class="form-group">
+</div>
+<div class="flex">
+  <app-product (cartRefresh)="refreshCart()" class="child" *ngFor="let product of products | filter: filterTerm;" [productInput]="product"></app-product>
+</div>

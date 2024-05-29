@@ -1,0 +1,122 @@
+.topButton{
+  transform: translateY(-2px);
+  background-color: var(--supper);
+  border-radius: 25px;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 5px 15px;
+  border: 3px solid var(--front);
+  transition: 0.4s;
+}
+
+.topButton:hover{
+  background-color: var(--front);
+  border: 3px solid var(--supper);
+}
+
+.btns{
+  text-align: center;
+  padding-right: 20px;
+}
+
+.reg{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.editUserDiv{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.editUserForm{
+  width: 80%;
+  margin: 15px;
+  display: grid;
+  justify-content: center;
+}
+
+.editUserForm input{
+  font-size: 120%;
+  border: solid 2px var(--front);
+  background-color: var(--supper);
+  text-align: center;
+  border-radius: 10px;
+  display: inline-grid;
+  width: 100%;
+}
+
+.editUserForm label{
+  font-size: 20px;
+  display: inline-grid;
+}
+
+.editUserButton{
+  display: inline;
+  background-color: var(--supper);
+  margin: 5px;
+  border: solid 2px var(--front);
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.editUserButton:hover{
+  background-color: var(--front);
+}
+
+.error{
+  color: red;
+}
+
+.hide{
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  width: 30%;
+  z-index: 999;
+  color: red;
+  font-weight: bold;
+}
+
+.cont{
+  margin: auto;
+  width: 50%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 50px 0;
+  border-radius: 20px;
+}
+
+.useE:hover + .useHide{
+  display: block;
+  top: 305px;
+}
+.fnE:hover + .fnHide{
+  display: block;
+  top: 370px;
+}
+.lnE:hover + .lnHide{
+  display: block;
+  top: 435px;
+}
+.emE:hover + .emHide{
+  display: block;
+  top: 500px;
+}
+.telE:hover + .telHide{
+  display: block;
+  top: 565px;
+}
+.adE:hover + .adHide{
+  display: block;
+  top: 630px;
+}
+.ctE:hover + .ctHide{
+  display: block;
+  top: 695px;
+}
+

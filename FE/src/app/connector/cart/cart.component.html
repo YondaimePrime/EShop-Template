@@ -1,0 +1,14 @@
+<div class="box">
+  <br>
+  <div *ngIf="cartList" class="ctb">
+    <div class="flex" *ngFor="let product of cartList; let i = index;">
+      <div>&nbsp;<i (click)="popProductFromCart(i)" class="fa fa-minus-circle">&nbsp;</i>{{product.name}}</div>
+      <div>{{product.price.toFixed(2)}}€</div>
+    </div>
+  </div>
+  <div class="price">
+    <span *ngIf="totalPrice">{{totalPrice.toFixed(2)}}€</span>
+    <span *ngIf="!totalPrice">0.00€</span>
+    <button routerLink="/checkout" class="formButton">Proceed to checkout</button>
+  </div>
+</div>

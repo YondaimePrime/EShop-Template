@@ -1,0 +1,15 @@
+<div class="productDiv">
+  <form class="productForm" [formGroup]="nicForm" (submit)="addProduct();">
+    <label for="ports">Ports</label>
+    <input type="text" formControlName="ports" id="ports" placeholder="ports">
+    <label for="maxSpeed">Max speed</label>
+    <input type="number" formControlName="maxSpeed" id="maxSpeed" placeholder="0">
+    <label for="opSys">Operating system</label>
+    <input type="text" formControlName="opSys" id="opSys" placeholder="Operating system">
+
+    <button class="formButton" type="submit" [disabled]="nicForm.invalid">
+      <span *ngIf="nicForm.invalid" class="text-danger">Fill out every section!</span>
+      <span *ngIf="!nicForm.invalid">Add product to the listing!</span>
+    </button>    <button class="formButton" type="reset">Clear</button>
+  </form>
+</div>

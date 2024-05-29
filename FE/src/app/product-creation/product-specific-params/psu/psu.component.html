@@ -1,0 +1,27 @@
+<div class="productDiv">
+  <form class="productForm" [formGroup]="psuForm" (submit)="addProduct();">
+    <label for="plugNumber">Number of Plugs</label>
+    <input type="number" formControlName="plugNumber" id="plugNumber" placeholder="0">
+    <label for="wattage">Wattage</label>
+    <input type="text" formControlName="wattage" id="wattage" placeholder="0">
+    <div class="modular">Modular</div>
+    <div class="flex">
+  <span>
+    <input  type="radio" id="yes" formControlName="modular" name="modular" value="yes" [checked]="true">
+    <label for="yes">Yes</label>
+  </span>
+      <span>
+    <input type="radio" id="no" formControlName="modular" name="modular" value="no">
+    <label for="no">No</label>
+  </span>
+    </div>
+    <label for="pinNumber">Number of Pins</label>
+    <input type="number" formControlName="pinNumber" id="pinNumber" placeholder="0">
+
+    <button class="formButton" type="submit" [disabled]="psuForm.invalid">
+      <span *ngIf="psuForm.invalid" class="text-danger">Fill out every section!</span>
+      <span *ngIf="!psuForm.invalid">Add product to the listing!</span>
+    </button>
+    <button class="formButton" type="reset">Clear</button>
+  </form>
+</div>

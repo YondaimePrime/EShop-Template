@@ -1,0 +1,6 @@
+
+<div *ngIf="checkType() == 'PSU' "><app-psu [mainparam]="genParams"></app-psu></div>
+<div *ngIf="checkType() == 'Motherboard'"><app-motherboard [mainparam]="genParams"></app-motherboard></div>
+<div *ngIf="checkType() == 'NIC'"><app-nic [mainparam]="genParams"></app-nic></div>
+<div *ngIf="checkType() == 'Processor'"><app-processor [mainparam]="genParams"></app-processor></div>
+<div *ngIf="checkType() == 'Disc'"><app-disc [mainparam]="genParams"></app-disc></div>

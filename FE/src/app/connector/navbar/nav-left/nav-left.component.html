@@ -1,0 +1,11 @@
+<div>
+  <i class="pointer barIcon fa fa-bars" (click)="caregory()"></i>
+  <i class="pointer barIcon fa fa-times invisible" (click)="caregory()"></i>
+  <span id="searchBar" class="searchBar"><input
+    type="text"
+    placeholder="Search..."
+    [(ngModel)]="filterTerm"
+    (change)="search()">
+    <i (click)="search()" class="searchIcon fa fa-search"></i>
+  </span>
+</div>

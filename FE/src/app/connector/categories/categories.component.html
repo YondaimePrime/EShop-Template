@@ -1,0 +1,27 @@
+<div class="box">
+  <div style="margin-left: 5px;">
+    <span>Categories</span>
+  </div>
+  <div class="categories">
+    <div (click)="getProductByType()" class="category">Remove filters</div>
+    <div (click)="ukaz('cpucat');" class="category">Processors<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+    <div class="cpucat" (click)="getProductByType('Processor','Intel')">Intel</div>
+    <div class="cpucat" (click)="getProductByType('Processor','AMD')">AMD</div>
+    <div class="cpucat" (click)="getProductByType('Processor')">Show all</div>
+    <!--    <div class="category" (click)="getProductByType('GPU');">Graphic cards</div>-->
+    <div (click)="ukaz('motcat')" class="category">Motherboards<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+    <div class="motcat" (click)="getProductByType('Motherboard','Intel')">Intel</div>
+    <div class="motcat" (click)="getProductByType('Motherboard','AMD')">AMD</div>
+    <div class="motcat" (click)="getProductByType('Motherboard')">Show all</div>
+    <div (click)="ukaz('disccat')" class="category">Discs<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+    <div class="disccat" (click)="getProductByType('Disc','HDD')">HDD</div>
+    <div class="disccat" (click)="getProductByType('Disc','SSD')">SSD</div>
+    <div class="disccat" (click)="getProductByType('Disc')">Show all</div>
+    <!--    <div (click)="ukaz('psucat');getProductByType('PSU')" class="category">PSU<i class="fa fa-chevron-down" aria-hidden="true"></i></div>-->
+    <!--    <div class="psucat"><600 Watts</div>-->
+    <!--    <div class="psucat">600-800 Watts</div>-->
+    <!--    <div class="psucat">>800 Watts</div>-->
+    <div class="category" (click)="getProductByType('PSU')">PSU</div>
+    <div class="category" (click)="getProductByType('NIC')">NIC</div>
+  </div>
+</div>

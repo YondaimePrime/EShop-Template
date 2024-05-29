@@ -1,0 +1,37 @@
+*{
+  text-align: right;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 2rem;
+}
+
+.formButton{
+  transform: translateY(-2px);
+  background-color: var(--supper);
+  border-radius: 25px;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 5px 15px;
+  border: 3px solid var(--front);
+  transition: 0.4s;
+}
+
+.formButton:hover{
+  background-color: var(--front);
+  border: 3px solid var(--supper);
+}
+
+.cartIcon{
+  margin-right: 30px;
+}
+
+.pointer{
+  cursor: pointer;
+  margin-left: 0;
+}
+@media only screen and (max-width: 1200px){
+  *{
+    text-align: center;
+  }
+}

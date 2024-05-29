@@ -1,0 +1,34 @@
+*{
+  background-color: var(--front);
+}
+
+nav{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left{
+  width: 35%;
+}
+
+.mid{
+  width: 30%;
+}
+
+.right{
+  width: 35%;
+}
+@media only screen and (max-width: 1200px){
+  .mid, .right, .left{
+    width: 100%;
+  }
+  .mid{
+    order: 1;
+  }
+  .left{
+    order: 2;
+  }
+  .right{
+    order: 3;
+  }
+}

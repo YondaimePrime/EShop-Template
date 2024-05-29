@@ -1,0 +1,4 @@
+<app-navbar (searchByWord)="filterTerm($event)"></app-navbar>
+<app-categories (searchByType)="getProductByType($event)" (searchByAdditional)="getProductByAdditional($event)" class="categories categoriestranslation"></app-categories>
+<app-cart [cartRefresh]="counter" class="cart carttranslation"></app-cart>
+<app-product-list (cartRefresh)="refreshCart()" [filterTerms]="filter" [productsInput]="products"></app-product-list>

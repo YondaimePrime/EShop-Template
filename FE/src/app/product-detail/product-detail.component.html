@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<app-cart [cartRefresh]="counter" class="cart carttranslation"></app-cart>
+<div *ngIf="product" class="offset-1 col-10 overlay">
+  <div class="row">
+    <div class="col-4">
+      <img class="productImage product" src="{{product.img}}" alt="Obrazok {{product.id }}">
+    </div>
+    <div class="col-8">
+      <h3 class="product">{{product.name}}</h3>
+      <p class="product">{{product.description}}</p>
+      <p class="product">{{product.price.toFixed(2)}} €</p>
+    </div>
+  </div>
+  <div class="properties">
+    <span style="float: right"><button *ngIf="user && user.admin" routerLink="/editproduct/{{product.id}}">Edit <i class="fa fa-pencil"></i></button>
+    <button *ngIf="user && user.admin" (click)="deleteProduct(product.id);">Delete <i class="fa fa-trash"></i></button>
+    <button (click)="addToCart()">Add to cart</button></span>
+    <h3>Product properties:</h3>
+    <div *ngFor="let entry of parametres" class="productsTab">
+      <div>{{entry}}</div>
+    </div>
+  </div>
+</div>

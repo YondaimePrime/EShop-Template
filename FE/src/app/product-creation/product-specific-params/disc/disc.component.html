@@ -1,0 +1,26 @@
+<div class="productDiv">
+  <form class="productForm" [formGroup]="discForm" (submit)="addProduct();">
+    <label for="discType">Type of disc</label>
+    <input type="text" formControlName="discType" id="discType" placeholder="Disc type">
+    <label for="capacity">Capacity</label>
+    <input type="number" formControlName="capacity" id="capacity" placeholder="GB">
+    <label for="lifetime">Lifetime</label>
+    <input type="number" formControlName="lifetime" id="lifetime" placeholder="TBW">
+    <div class="modular">Disc type</div>
+    <div class="flex">
+  <span>
+    <input  type="radio" id="HDD" formControlName="additional" name="additional" value="HDD" [checked]="true">
+    <label for="HDD">HDD</label>
+  </span>
+      <span>
+    <input type="radio" id="SSD" formControlName="additional" name="additional" value="SSD">
+    <label for="SSD">SSD</label>
+  </span>
+    </div>
+
+    <button class="formButton" type="submit" [disabled]="discForm.invalid">
+      <span *ngIf="discForm.invalid" class="text-danger">Fill out every section!</span>
+      <span *ngIf="!discForm.invalid">Add product to the listing!</span>
+    </button>    <button class="formButton" type="reset">Clear</button>
+  </form>
+</div>

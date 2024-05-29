@@ -1,0 +1,62 @@
+<app-nav-mid></app-nav-mid>
+
+<div class="cont">
+  <div class="btns">
+    <button *ngIf="user && user.admin" class="topButton" routerLink="/addproduct">Add product</button>&nbsp;
+    <button class="topButton" (click)="theme()">Change theme</button>
+  </div>
+    <div class="editUserDiv" *ngIf="user">
+      <div class="reg">Edit user details</div>
+      <form [formGroup]="editUserForm" class="editUserForm" (submit)="editUser();">
+        <label for="username"><span>Username <i *ngIf="editUserForm.controls.username.invalid" class="useE error searchIcon fa fa-exclamation"></i>
+        <div class="useHide hide">
+         Username must be at least 6 characters long!
+        </div>
+        </span></label>
+        <input type="text" formControlName="username" id="username" placeholder="Username">
+        <label for="firstName"><span>First Name <i *ngIf="editUserForm.controls.firstName.invalid" class="fnE error searchIcon fa fa-exclamation"></i>
+        <div class="fnHide hide">
+         First name must be at least 3 characters long!
+        </div>
+        </span></label>
+        <input type="text" formControlName="firstName" id="firstName" placeholder="Name">
+        <label for="lastName"><span>Surname <i *ngIf="editUserForm.controls.lastName.invalid" class="lnE error searchIcon fa fa-exclamation"></i>
+        <div class="lnHide hide">
+         Surname must be at least 3 characters long!
+        </div>
+        </span></label>
+        <input type="text" formControlName="lastName" id="lastName" placeholder="Surname">
+        <label for="email"><span>E-mail Address <i *ngIf="editUserForm.controls.email.invalid" class="emE error searchIcon fa fa-exclamation"></i>
+        <div class="emHide hide">
+          Email is incorrect!
+        </div>
+        </span></label>
+        <input type="email" formControlName="email" id="email" [email]="true" placeholder="Email">
+        <label for="number"><span>Tel. Number <i *ngIf="editUserForm.controls.number.invalid" class="telE error searchIcon fa fa-exclamation"></i>
+        <div class="telHide hide">
+          Tel. number must be at least 10 numbers long!
+        </div>
+        </span></label>
+        <input type="text" formControlName="number" id="number" placeholder="Tel. Number">
+        <label for="address"><span>Address <i *ngIf="editUserForm.controls.address.invalid" class="adE error searchIcon fa fa-exclamation"></i>
+        <div class="adHide hide">
+          Address is required!
+        </div>
+        </span></label>
+        <input type="text" formControlName="address" id="address" placeholder="Address">
+        <label for="city"><span>City <i *ngIf="editUserForm.controls.city.invalid" class="ctE error searchIcon fa fa-exclamation"></i>
+        <div class="ctHide hide">
+          City is required!
+        </div>
+        </span></label>
+        <input type="text" formControlName="city" id="city" placeholder="City">
+
+        <button class="editUserButton" type="submit" [disabled]="editUserForm.invalid">
+          <span *ngIf="editUserForm.invalid" class="text-danger">Fill out every section!</span>
+          <span *ngIf="!editUserForm.invalid">Edit user details</span>
+        </button>
+        <button class="editUserButton" type="reset">Clear</button>
+        <button class="editUserButton" (click)="deleteUser()">Delete account</button>
+      </form>
+    </div>
+</div>

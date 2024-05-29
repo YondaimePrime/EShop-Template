@@ -1,0 +1,38 @@
+:root{
+  --front:#00AAFF;
+  --supper:#001242;
+  --back:#000022;
+  --tsupper:rgba(0, 18, 66,0.7);
+  --text:whitesmoke;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('assets/images/TechBackgorund.png');
+}
+*{
+  color: var(--text);
+}
+body{
+  background:none;
+}
+
+.invisible{
+  display: none !important;
+  transition: 0s !important;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+  background-color: var(--back);
+  border: 1px solid var(--supper);
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px var(--front);
+}
+
+body::-webkit-scrollbar-thumb {
+  box-shadow: inset -4px -3px 10px var(--back);
+  border-radius: 5px;
+  background-color: var(--front);
+  /*outline: 1px solid #00AAFF;*/
+}
+

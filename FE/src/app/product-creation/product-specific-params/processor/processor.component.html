@@ -1,0 +1,28 @@
+<div class="productDiv">
+  <form class="productForm" [formGroup]="processorForm" (submit)="addProduct();">
+    <label for="series">Series</label>
+    <input type="text" formControlName="series" id="series" placeholder="Series">
+    <label for="cores">Cores</label>
+    <input type="number" formControlName="cores" id="cores" placeholder="0">
+    <label for="threads">Threads</label>
+    <input type="number" formControlName="threads" id="threads" placeholder="0">
+    <label for="socket">Socket</label>
+    <input type="text" formControlName="socket" id="socket" placeholder="Socket">
+    <div class="modular">Company</div>
+    <div class="flex">
+  <span>
+    <input  type="radio" id="Intel" formControlName="additional" name="additional" value="Intel" [checked]="true">
+    <label for="Intel">Intel</label>
+  </span>
+      <span>
+    <input type="radio" id="AMD" formControlName="additional" name="additional" value="AMD">
+    <label for="AMD">AMD</label>
+  </span>
+    </div>
+
+    <button class="formButton" type="submit" [disabled]="processorForm.invalid">
+      <span *ngIf="processorForm.invalid" class="text-danger">Fill out every section!</span>
+      <span *ngIf="!processorForm.invalid">Add product to the listing!</span>
+    </button>    <button class="formButton" type="reset">Clear</button>
+  </form>
+</div>

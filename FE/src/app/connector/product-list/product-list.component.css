@@ -1,0 +1,15 @@
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.child{
+  margin: 15px 0;
+  width: 45%;
+}
+@media only screen and (max-width: 1200px){
+  .child{
+    width: 90%;
+  }
+}

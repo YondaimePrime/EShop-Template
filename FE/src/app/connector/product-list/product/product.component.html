@@ -1,0 +1,13 @@
+<div class="productsTab">
+<div class="row" routerLink="/detail/{{product?.id}}">
+  <div class="col-4">
+    <img class=" productImage" src="{{product?.img}}" alt="{{product?.name?.substring(0,15)}}">
+  </div>
+  <div class="col-8">
+    <h2>{{product?.name}}</h2>
+    <div class="description">{{product?.description}}</div>
+    <div class="price">{{product?.price?.toFixed(2)}}€</div>
+  </div>
+</div>
+<button (click)="addToCart();" class="addToCartButton">Add to cart</button>
+</div>

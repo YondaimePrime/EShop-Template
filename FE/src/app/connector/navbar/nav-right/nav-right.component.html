@@ -1,0 +1,14 @@
+<div>
+    <span class="user">
+      <span *ngIf="user">
+        <span class="pointer" routerLink="/settings">{{user.username}}<i class="fa fa-cog"></i></span>
+        <button (click)="logOut()" class="formButton">Log Out</button>
+      </span>
+      <span *ngIf="!user">
+        <span class="pointer" routerLink="/settings"><i class="fa fa-cog"></i></span>
+        <button class="formButton" routerLink="/login">Log In</button>
+      </span>
+    </span>
+  <i (click)="cart()" class="pointer cartIcon fa fa-shopping-cart"></i>
+  <i (click)="cart()" class="pointer cartIcon fa fa fa-times invisible"></i>
+</div>

@@ -1,0 +1,74 @@
+<app-nav-mid></app-nav-mid>
+
+<div class="cont">
+  <div class="registerDiv">
+    <div class="reg">Register</div>
+    <form [formGroup]="registerForm" class="registerForm" (submit)="registerUser();">
+      <label for="username"><span>Username <i *ngIf="registerForm.controls.username.invalid" class="useE error searchIcon fa fa-exclamation"></i>
+        <div class="useHide hide">
+         Username must be at least 6 characters long!
+        </div>
+        </span></label>
+      <input type="text" formControlName="username" id="username" placeholder="Username">
+      <label for="firstName"><span>First Name <i *ngIf="registerForm.controls.firstName.invalid" class="fnE error searchIcon fa fa-exclamation"></i>
+        <div class="fnHide hide">
+         First name must be at least 3 characters long!
+        </div>
+        </span></label>
+      <input type="text" formControlName="firstName" id="firstName" placeholder="Name">
+      <label for="lastName"><span>Surname <i *ngIf="registerForm.controls.lastName.invalid" class="lnE error searchIcon fa fa-exclamation"></i>
+        <div class="lnHide hide">
+         Surname must be at least 3 characters long!
+        </div>
+        </span></label>
+      <input type="text" formControlName="lastName" id="lastName" placeholder="Surname">
+      <label for="password"><span>Password <i *ngIf="registerForm.controls.password.invalid" class="pwE error searchIcon fa fa-exclamation"></i>
+        <div class="pwHide hide">
+          Password must contain both upper and lower case letter/s, can not start with number and contain any special character!
+        </div>
+        </span></label>
+      <input type=password formControlName="password" id="password" placeholder="Password">
+      <label for="repassword"><span>Repeat Password <i *ngIf="registerForm.controls.repassword.invalid || registerForm.controls.repassword.value != registerForm.controls.password.value" class="rpE error searchIcon fa fa-exclamation"></i>
+        <div class="rpHide hide">
+         Passwords do not match!
+        </div>
+        </span></label>
+      <input type="password" formControlName="repassword" id="repassword" placeholder="Repeat password">
+      <label for="email"><span>E-mail Address <i *ngIf="registerForm.controls.email.invalid" class="emE error searchIcon fa fa-exclamation"></i>
+        <div class="emHide hide">
+          Email is incorrect!
+        </div>
+        </span></label>
+      <input type="email" formControlName="email" id="email" [email]="true" placeholder="Email">
+      <label for="number"><span>Tel. Number <i *ngIf="registerForm.controls.number.invalid" class="telE error searchIcon fa fa-exclamation"></i>
+        <div class="telHide hide">
+          Tel. number must be at least 10 numbers long!
+        </div>
+        </span></label>
+      <input type="text" formControlName="number" id="number" placeholder="Tel. Number">
+      <label for="address"><span>Address <i *ngIf="registerForm.controls.address.invalid" class="adE error searchIcon fa fa-exclamation"></i>
+        <div class="adHide hide">
+          Address is required!
+        </div>
+        </span></label>
+      <input type="text" formControlName="address" id="address" placeholder="Address">
+      <label for="city"><span>City <i *ngIf="registerForm.controls.city.invalid" class="ctE error searchIcon fa fa-exclamation"></i>
+        <div class="ctHide hide">
+          City is required!
+        </div>
+        </span></label>
+      <input type="text" formControlName="city" id="city" placeholder="City">
+
+      <button class="formButton" type="submit" [disabled]="registerForm.invalid">
+        <span *ngIf="registerForm.invalid" class="text-danger">Fill out every section!</span>
+        <span *ngIf="!registerForm.invalid">Register</span>
+      </button>
+      <button class="formButton" type="reset">Clear</button>
+
+    </form>
+    <div style="padding-right: 20px;">
+      Already have an account?
+      <button class="formButton" routerLink="/login">Login</button>
+    </div>
+  </div>
+</div>

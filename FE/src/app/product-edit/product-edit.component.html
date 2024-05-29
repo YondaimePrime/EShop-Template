@@ -1,0 +1,30 @@
+<app-nav-mid></app-nav-mid>
+<div class="ctn">
+<div class="productDiv">
+<form class="productForm" [formGroup]="editProduct" (submit)="editProduct();">
+  <label for="type">Select product type</label>
+  <select formControlName="type" id="type">
+    <option value="PSU">Power supply</option>
+    <option value="Motherboard">Motherboard</option>
+    <option value="NIC">NIC</option>
+    <option value="Processor">Processor</option>
+    <option value="Disc">Discs</option>
+  </select>
+  <label for="name">Name</label>
+  <input formControlName="name" id="name" type="text">
+  <label for="count">Count</label>
+  <input formControlName="count" id="count" type="number">
+  <label for="price">Price</label>
+  <input formControlName="price" id="price" type="number">
+  <label for="description">Description</label>
+  <input formControlName="description" id="description" type="text">
+  <label for="image">Upload image</label>
+  <input formControlName="image" id="image" type="url">
+  <button class="formButton" type="submit" [disabled]="editProduct.invalid">
+    <span *ngIf="editProduct.invalid" class="text-danger">Fill out every section!</span>
+    <span *ngIf="!editProduct.invalid">Edit product!</span>
+  </button>
+  <button class="formButton" type="reset">Clear</button>
+</form>
+</div>
+</div>

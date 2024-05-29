@@ -1,0 +1,89 @@
+.form{
+  border: 2px solid var(--front);
+  padding: 20px;
+  background-color: var(--supper);
+  margin-top: 8%;
+}
+
+input,label{
+  width: 100%;
+  display: block;
+}
+
+input{
+  color: black;
+}
+
+.width{
+  width: 100%;
+}
+
+.formButton{
+  display: inline;
+  background-color: var(--supper);
+  margin: 5px;
+  border: solid 2px var(--front);
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.formButton:hover{
+  background-color: var(--front);
+}
+
+.box{
+  font-size: 1.1rem;
+}
+
+.carttxt{
+  margin-top: 50px;
+  margin-left: 10%;
+  width: 80%;
+  border: 2px solid var(--front);
+  padding: 0 20px;
+  background-color: var(--supper);
+}
+
+.cart{
+  margin-left: 10%;
+  margin-bottom: 50px;
+  width: 80%;
+  top: 50px;
+  height: auto;
+  bottom: 150px;
+  border: 2px solid var(--front);
+  padding: 0 20px;
+  background-color: var(--supper);
+}
+
+.bttn{
+  background-color: var(--back);
+  border: 2px solid var(--front);
+  border-radius: 5px;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.center{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.price{
+  text-align: right;
+  width: auto;
+  border-top: 1px solid var(--front);
+}
+
+.productname{
+  text-align: left;
+}
+.productprice{
+  float: right;
+}

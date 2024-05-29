@@ -1,0 +1,30 @@
+<div class="productDiv">
+  <form class="productForm" [formGroup]="productForm" (submit)="addProduct()">
+    <label for="type">Select product type</label>
+    <select formControlName="type" id="type">
+      <option value="PSU">Power supply</option>
+      <option value="Motherboard">Motherboard</option>
+      <option value="NIC">NIC</option>
+      <option value="Processor">Processor</option>
+      <option value="Disc">Discs</option>
+    </select>
+    <label for="name">Name</label>
+    <input type="text" formControlName="name" id="name" placeholder="Name">
+    <label for="price">Price</label>
+    <input type="number" formControlName="price" id="price" placeholder="0">
+    <label for="description">Description</label>
+    <input type="text" formControlName="description" id="description" placeholder="Description">
+    <label for="count">Count</label>
+    <input type="number" formControlName="count" id="count" placeholder="0">
+    <label for="image">Upload image</label>
+    <input type="url" formControlName="image" id="image">
+
+
+
+    <button class="formButton" type="submit" [disabled]="productForm.invalid">
+      <span *ngIf="productForm.invalid" class="text-danger">Fill out every section!</span>
+      <span *ngIf="!productForm.invalid">Continue to product specific form!</span>
+    </button>
+    <button class="formButton" type="reset">Clear</button>
+  </form>
+</div>

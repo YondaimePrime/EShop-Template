@@ -1,0 +1,7 @@
+.ctn{
+  margin: auto;
+  width: 50%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 50px 0;
+  border-radius: 20px;
+}

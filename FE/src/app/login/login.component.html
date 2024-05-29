@@ -1,0 +1,26 @@
+<app-nav-mid></app-nav-mid>
+<div class="cont">
+  <div class="loginDiv">
+    <div class="log">Login</div>
+    <form [formGroup]="loginForm" class="loginForm" (submit)="checkUser();">
+      <label for="email">E-mail Address</label>
+      <input type="email" formControlName="email" id="email" [email]="true" placeholder="E-mail">
+      <label for="password"><span>Password <i *ngIf="loginForm.controls.password.invalid" class="error searchIcon fa fa-exclamation"></i>
+        <div class="hide">
+          Password must contain both upper and lower case letter/s, can not start with number and contain any special character
+        </div></span>
+      </label>
+      <input type="password" formControlName="password" id="password" placeholder="Password">
+      <br>
+      <button class="formButton" type="submit" [disabled]="loginForm.invalid">
+        <span *ngIf="loginForm.invalid" class="text-danger">Fill out every section!</span>
+        <span *ngIf="!loginForm.invalid">Log in</span>
+      </button>
+      <button class="formButton" type="reset">Clear</button>
+    </form>
+    <div>
+      Do not have an account?
+      <button class="formButton" routerLink="/register">Register</button>
+    </div>
+  </div>
+</div>

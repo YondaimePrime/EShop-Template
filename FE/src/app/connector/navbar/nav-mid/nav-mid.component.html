@@ -1,0 +1,5 @@
+<div class="center" *ngIf="this.router.url == '/';
+  then navRef
+  else navRel"></div>
+  <ng-template #navRef><div class="pointer center" (click)="refresh();">TWM Electronics</div></ng-template>
+  <ng-template #navRel><div class="pointer center" routerLink="/">TWM Electronics</div></ng-template>

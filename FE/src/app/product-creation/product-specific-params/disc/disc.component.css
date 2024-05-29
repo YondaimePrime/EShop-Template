@@ -1,0 +1,60 @@
+input, label, select{
+  display: block;
+}
+
+.productDiv{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.productForm{
+  width: 100%;
+  margin: 15px;
+  display: grid;
+  justify-content: center;
+}
+
+input, select{
+  font-size: 120%;
+  border: solid 2px var(--front);
+  background-color: var(--supper);
+  text-align: center;
+  border-radius: 10px;
+  display: inline-grid;
+  width: 100%;
+}
+
+label{
+  font-size: 20px;
+  display: inline-grid;
+}
+
+.formButton{
+  display: inline;
+  background-color: var(--supper);
+  margin: 5px;
+  border: solid 2px var(--front);
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.formButton:hover{
+  background-color: var(--front);
+}
+
+.modular{
+  font-size: 120%;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 120%;
+  border: solid 2px var(--front);
+  background-color: var(--supper);
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+}

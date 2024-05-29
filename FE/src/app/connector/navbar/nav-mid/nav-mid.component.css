@@ -1,0 +1,16 @@
+.center{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 2rem;
+}
+
+.pointer{
+  cursor: pointer;
+  font-size: 2rem;
+  transform: translateY(10px);
+}
+
+div{
+  min-height: 75px;
+}

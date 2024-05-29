@@ -1,0 +1,6 @@
+<nav>
+  <app-nav-left *ngIf="router.url == '/'" (searchByWord)="filterTerm($event)" class="left"></app-nav-left>
+  <div *ngIf="router.url != '/'" class="left">&nbsp;</div>
+  <app-nav-mid class="mid"></app-nav-mid>
+  <app-nav-right class="right"></app-nav-right>
+</nav>

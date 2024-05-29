@@ -1,0 +1,75 @@
+.log{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.loginDiv{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.loginForm{
+  width: 80%;
+  margin: 15px;
+  display: grid;
+  justify-content: center;
+}
+
+.loginForm input{
+  font-size: 120%;
+  border: solid 2px var(--front);
+  background-color: var(--supper);
+  text-align: center;
+  border-radius: 10px;
+  display: inline-grid;
+  width: 100%;
+}
+
+.loginForm label{
+  font-size: 20px;
+  display: inline-grid;
+}
+
+.formButton{
+  display: inline;
+  background-color: var(--supper);
+  margin: 5px;
+  border: solid 2px var(--front);
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.formButton:hover{
+  background-color: var(--front);
+}
+
+.cont{
+  margin: auto;
+  width: 50%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 50px 0;
+  border-radius: 20px;
+}
+
+.error{
+  color: red;
+}
+
+.hide{
+  display: none;
+}
+
+.error:hover + .hide{
+  background-color: rgba(0,0,0,0.8);
+  width: 30%;
+  z-index: 999;
+  color: red;
+  display: block;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
